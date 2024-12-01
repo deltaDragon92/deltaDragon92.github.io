@@ -25,5 +25,19 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+  if (document.createElement('link').relList.supports('manifest')) {
+    console.log('Manifesto supportato!');
+    const manifestLink = document.querySelector('link[rel="manifest"]');
+    if (manifestLink) {
+      console.log('Manifesto caricato:', manifestLink.href);
+    } else {
+      console.log('Manifesto non trovato.');
+    }
+  } else {
+    console.log('Manifesto non supportato su questo dispositivo.');
+  }
+</script>
+
 </body>
 </html>
