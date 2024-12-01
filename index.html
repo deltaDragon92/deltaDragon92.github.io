@@ -1,46 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#4CAF50"> <!-- Colore della barra degli strumenti su Android -->
-    <title>La Mia Web App</title>
-
-    <!-- Icone per la web app -->
-    <link rel="icon" href="icon.png">
-    <link rel="apple-touch-icon" href="icon.png">
-
-    <!-- Manifesto per la Web App -->
-    <link rel="manifest" href="manifest.json">
-
-    <!-- Stili aggiuntivi -->
+    <title>Web App di Test</title>
     <link rel="stylesheet" href="styles.css">
-
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="mobile-web-app-title" content="La Mia Web App">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
-
 </head>
 <body>
-    <h1>Benvenuto nella mia Web App!</h1>
-    <p>Questa è una web app configurata per apparire come una PWA.</p>
+    <header>
+        <h1>Benvenuto nella mia Web App di Test</h1>
+    </header>
 
-    <script src="service-worker.js"></script>
-    <script defer>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-      navigator.serviceWorker.register('service-worker.js')
-        .then(function(registration) {
-          console.log('Service Worker registrato con successo:', registration);
-        })
-        .catch(function(error) {
-          console.log('Registrazione del Service Worker fallita:', error);
-        });
-    });
-  }
-</script>
+    <main>
+        <p>Questa è una web app semplice per test.</p>
+        <button id="clickMeButton">Clicca qui!</button>
+        <p id="message"></p>
+    </main>
 
-    
+    <footer>
+        <p>Test web app</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
