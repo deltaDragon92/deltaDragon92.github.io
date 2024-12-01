@@ -21,7 +21,7 @@
     <p>Questa è una web app configurata per apparire come una PWA.</p>
 
     <script src="service-worker.js"></script>
-    <script>
+    <script defer>
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
       navigator.serviceWorker.register('service-worker.js')
@@ -35,5 +35,6 @@
   }
 </script>
 
+    
 </body>
 </html>
