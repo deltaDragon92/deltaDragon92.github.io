@@ -1,9 +1,3 @@
 {
-  "name": "La Mia Web App",
-  "short_name": "WebApp",
-  "description": "Una web app che si comporta come un'app nativa",
-  "start_url": "/index.html",
-  "display": "fullscreen",  // Mostra la web app senza la barra degli indirizzi del browser
-  "background_color": "#ffffff",
-  "theme_color": "#4CAF50",
+  "display": "fullscreen"
 }
