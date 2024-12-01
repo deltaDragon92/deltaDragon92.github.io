@@ -1,1 +1,39 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#4CAF50"> <!-- Colore della barra degli strumenti su Android -->
+    <title>La Mia Web App</title>
+
+    <!-- Icone per la web app -->
+    <link rel="icon" href="icon.png">
+    <link rel="apple-touch-icon" href="icon.png">
+
+    <!-- Manifesto per la Web App -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Stili aggiuntivi -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Benvenuto nella mia Web App!</h1>
+    <p>Questa è una web app configurata per apparire come una PWA.</p>
+
+    <script src="service-worker.js"></script>
+    <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(function(registration) {
+          console.log('Service Worker registrato con successo:', registration);
+        })
+        .catch(function(error) {
+          console.log('Registrazione del Service Worker fallita:', error);
+        });
+    });
+  }
+</script>
+
+</body>
+</html>
