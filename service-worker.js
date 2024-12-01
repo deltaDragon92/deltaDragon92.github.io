@@ -4,7 +4,8 @@ self.addEventListener('install', function(event) {
       return cache.addAll([
         '/index.html',
         '/styles.css',
-        '/icon.png'
+        '/icon.png',
+        '/manifest.json', // Assicurati che il manifesto venga aggiunto alla cache
       ]);
     })
   );
@@ -13,7 +14,9 @@ self.addEventListener('install', function(event) {
 self.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request).then(function(response) {
-      return response || fetch(event.request);
+      return response || fetch(event.request).then(function(fetchResponse) {
+        return fetchResponse;
+      });
     })
   );
 });
